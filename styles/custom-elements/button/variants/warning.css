@@ -1,0 +1,38 @@
+.ce-button[data-variant='warning'] {
+  --bg-color: rgba(var(--ce-color-yellow-700));
+  --text-color: rgba(var(--ce-color-yellow-100));
+
+  --bg-color_hover: rgba(var(--ce-color-yellow-600));
+  --text-color_hover: rgba(var(--ce-color-yellow-50));
+
+  --bg-color_active: rgba(var(--ce-color-yellow-500));
+  --text-color_active: rgba(var(--ce-color-yellow-50));
+
+  --outline-color_focus: rgba(var(--ce-color-yellow-50));
+}
+
+.ce-button[data-variant='warning'][data-transparent] {
+  --bg-color: rgba(var(--ce-color-yellow-400), 0.12);
+  --text-color: rgba(var(--ce-color-yellow-400));
+
+  --bg-color_hover: rgba(var(--ce-color-yellow-400), 0.18);
+  --text-color_hover: rgba(var(--ce-color-yellow-300));
+
+  --bg-color_active: rgba(var(--ce-color-yellow-400), 0.24);
+  --text-color_active: rgba(var(--ce-color-yellow-50));
+
+  --outline-color_focus: rgba(var(--ce-color-yellow-400));
+}
+
+.ce-button[data-variant='warning']:not([data-fill]) {
+  --bg-color: none;
+  --text-color: rgba(var(--ce-color-yellow-400));
+
+  --bg-color_hover: rgba(var(--ce-color-yellow-400), 0.08);
+  --text-color_hover: rgba(var(--ce-color-yellow-300));
+
+  --bg-color_active: rgba(var(--ce-color-yellow-400), 0.12);
+  --text-color_active: rgba(var(--ce-color-yellow-200));
+
+  --outline-color_focus: rgba(var(--ce-color-yellow-400));
+}

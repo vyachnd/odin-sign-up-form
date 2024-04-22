@@ -1,0 +1,38 @@
+.ce-button[data-variant='secondary'] {
+  --bg-color: rgba(var(--ce-color-sky-700));
+  --text-color: rgba(var(--ce-color-sky-100));
+
+  --bg-color_hover: rgba(var(--ce-color-sky-600));
+  --text-color_hover: rgba(var(--ce-color-sky-50));
+
+  --bg-color_active: rgba(var(--ce-color-sky-500));
+  --text-color_active: rgba(var(--ce-color-sky-50));
+
+  --outline-color_focus: rgba(var(--ce-color-sky-50));
+}
+
+.ce-button[data-variant='secondary'][data-transparent] {
+  --bg-color: rgba(var(--ce-color-sky-400), 0.12);
+  --text-color: rgba(var(--ce-color-sky-400));
+
+  --bg-color_hover: rgba(var(--ce-color-sky-400), 0.18);
+  --text-color_hover: rgba(var(--ce-color-sky-300));
+
+  --bg-color_active: rgba(var(--ce-color-sky-400), 0.24);
+  --text-color_active: rgba(var(--ce-color-sky-50));
+
+  --outline-color_focus: rgba(var(--ce-color-sky-400));
+}
+
+.ce-button[data-variant='secondary']:not([data-fill]) {
+  --bg-color: none;
+  --text-color: rgba(var(--ce-color-sky-400));
+
+  --bg-color_hover: rgba(var(--ce-color-sky-400), 0.08);
+  --text-color_hover: rgba(var(--ce-color-sky-300));
+
+  --bg-color_active: rgba(var(--ce-color-sky-400), 0.12);
+  --text-color_active: rgba(var(--ce-color-sky-200));
+
+  --outline-color_focus: rgba(var(--ce-color-sky-400));
+}

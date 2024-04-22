@@ -1,0 +1,38 @@
+.ce-button {
+  --bg-color: rgba(var(--ce-color-zinc-700));
+  --text-color: rgba(var(--ce-color-zinc-100));
+
+  --bg-color_hover: rgba(var(--ce-color-zinc-600));
+  --text-color_hover: rgba(var(--ce-color-zinc-50));
+
+  --bg-color_active: rgba(var(--ce-color-zinc-500));
+  --text-color_active: rgba(var(--ce-color-zinc-50));
+
+  --outline-color_focus: rgba(var(--ce-color-zinc-50));
+}
+
+.ce-button[data-transparent] {
+  --bg-color: rgba(var(--ce-color-zinc-50), 0.06);
+  --text-color: rgba(var(--ce-color-zinc-100));
+
+  --bg-color_hover: rgba(var(--ce-color-zinc-50), 0.12);
+  --text-color_hover: rgba(var(--ce-color-zinc-50));
+
+  --bg-color_active: rgba(var(--ce-color-zinc-50), 0.18);
+  --text-color_active: rgba(var(--ce-color-zinc-50));
+
+  --outline-color_focus: rgba(var(--ce-color-zinc-50));
+}
+
+.ce-button:not([data-fill]) {
+  --bg-color: none;
+  --text-color: rgba(var(--ce-color-zinc-50));
+
+  --bg-color_hover: rgba(var(--ce-color-zinc-50), 0.06);
+  --text-color_hover: rgba(var(--ce-color-zinc-50));
+
+  --bg-color_active: rgba(var(--ce-color-zinc-50), 0.12);
+  --text-color_active: rgba(var(--ce-color-zinc-50));
+
+  --outline-color_focus: rgba(var(--ce-color-zinc-50));
+}
