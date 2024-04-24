@@ -1,3 +1,10 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font: var(--ce-font-roboto-normal);
+}
+
 h1 {
   font: var(--ce-font-roboto-bold-3xl);
 }
@@ -15,4 +22,8 @@ h5 {
 }
 h6 {
   font: var(--ce-font-roboto-bold-sm);
+}
+
+p {
+  font: var(--ce-font-roboto-normal);
 }
