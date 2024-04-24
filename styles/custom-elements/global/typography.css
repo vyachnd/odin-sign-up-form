@@ -1,6 +1,8 @@
 *,
 *::before,
-*::after {
+*::after,
+html,
+body {
   box-sizing: border-box;
   font: var(--ce-font-roboto-normal);
 }
