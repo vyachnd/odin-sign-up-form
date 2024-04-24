@@ -1,16 +1,19 @@
 /*
-  Size                'base'
-  Variant             'base', 'secondary'
-  Darkened            Boolean
-  Bordered            Boolean
-  Rounded             Boolean
-  Disabled            Boolean
-  ---------------------------
-        FOR INPUT FIELD
-  ---------------------------
-  Value               String
-  Placeholder         String
-  For                 String
+  --------------------------------------------------------------------------------------------------
+  SETTINGS
+  --------------------------------------------------------------------------------------------------
+  Size                        'base'
+  Variant                     'base', 'secondary'
+  Darkened                    Boolean
+  Bordered                    Boolean
+  Rounded                     Boolean
+  Disabled                    Boolean
+  --------------------------------------------------------------------------------------------------
+  INPUT FIELD
+  --------------------------------------------------------------------------------------------------
+  Value                       String
+  Placeholder                 String
+  For                         String
 */
 
 import helpers from '../../../libraries/helpers.js';
@@ -18,16 +21,8 @@ import CreateElement from '../../createElement.js';
 import { CEButton, CEIcon } from '../init.js';
 
 class CEInputText extends CreateElement {
-  constructor(children, settings, attributes = {}, events = {}) {
-    super(
-      'div',
-      {
-        disabled: Boolean(settings?.disabled),
-        class: [...(attributes?.class || []), 'ce-input']
-      },
-      [],
-      events,
-    );
+  constructor(children, settings, attributes, events) {
+    super('div', attributes, [], events);
 
     this.inputChild = new CreateElement('input', {
       type: 'text',
@@ -42,8 +37,8 @@ class CEInputText extends CreateElement {
 
     this.settings = {};
 
-    this.setSettings(settings);
-    this.setChildren(children);
+    this.setSettings(settings || {});
+    this.setChildren(children || []);
   }
 
   get value() { return this.inputChild.element.value; }
@@ -59,11 +54,12 @@ class CEInputText extends CreateElement {
 
     this.updateAttributes({
       ...this.attributes,
-      disabled: Boolean(settings?.disabled),
+      class: [...(this.attributes?.class || []), 'ce-input'],
       dataset: {
         fill: true,
         ...helpers.removeKey(settings, ['value', 'placeholder', 'for']),
       },
+      disabled: Boolean(settings?.disabled),
     });
 
     for (const child of this.children) {
@@ -92,11 +88,12 @@ class CEInputText extends CreateElement {
         child.updateAttributes({
           ...child.attributes,
           class: [...(child.attributes?.class || []), 'ce-input__button'],
-          dataset: {
-            ...child.attributes?.dataset,
-            variant: this.settings?.variant,
-            rounded: this.settings?.rounded,
-          }
+        });
+
+        child.setSettings({
+          ...child.settings,
+          variant: this.settings?.variant,
+          rounded: this.settings?.rounded,
         });
       }
     }

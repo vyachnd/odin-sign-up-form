@@ -1,18 +1,20 @@
 /*
-  Variant             'base', 'secondary', 'warning', 'error', 'submit'
+  --------------------------------------------------------------------------------------------------
+  SETTINGS
+  --------------------------------------------------------------------------------------------------
+  Icon                        String
+  Title                       String
+  Variant                     'base', 'secondary', 'warning', 'error', 'submit'
 */
 
 import CreateElement from '../../createElement.js';
 import { CEIcon } from '../init.js';
 
 class CEHeading extends CreateElement {
-  constructor(settings, attributes = {}) {
+  constructor(settings, attributes) {
     super(
       'div',
-      {
-        ...attributes,
-        class: [...(attributes?.class || []), 'ce-heading'],
-      },
+      attributes,
       [
         (settings?.icon ? new CEIcon(settings?.icon, { fill: true }, { class: ['ce-heading__icon'] }) : null),
         new CreateElement('div', { class: ['ce-heading__container'] }, [
@@ -27,15 +29,14 @@ class CEHeading extends CreateElement {
 
     this.settings = {};
 
-    this.setSettings(settings);
+    this.setSettings(settings || {});
   }
 
   setSettings(settings) {
     this.updateAttributes({
       ...this.attributes,
-      dataset: {
-        ...settings,
-      },
+      class: [...(this.attributes.class || []), 'ce-heading'],
+      dataset: { ...settings },
     });
 
     this.settings = settings;
