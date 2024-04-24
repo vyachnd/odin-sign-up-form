@@ -9,6 +9,9 @@
 /* Variants */
 @import './variants/base.css';
 @import './variants/secondary.css';
+@import './variants/submit.css';
+@import './variants/warning.css';
+@import './variants/error.css';
 
 /* Appereance */
 @import './appereance.css';
