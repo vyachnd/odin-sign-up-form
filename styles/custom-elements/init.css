@@ -1,3 +1,6 @@
+/* Normalize */
+@import './reset.css';
+
 /* Global */
 @import './global/colors.css';
 @import './global/fonts.css';
