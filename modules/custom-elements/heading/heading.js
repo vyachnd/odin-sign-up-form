@@ -16,7 +16,7 @@ class CEHeading extends CreateElement {
       'div',
       attributes,
       [
-        (settings?.icon ? new CEIcon(settings?.icon, { fill: true }, { class: ['ce-heading__icon'] }) : null),
+        (settings?.icon ? new CEIcon(settings?.icon, { fill: true, type: 'rounded' }, { class: ['ce-heading__icon'] }) : null),
         new CreateElement('div', { class: ['ce-heading__container'] }, [
           new CreateElement('h1', { class: ['ce-heading__title'] }, [settings?.title || 'Title']),
           new CreateElement('p', { class: ['ce-heading__subtitle'] }, [
