@@ -59,6 +59,7 @@ class CEInputText extends CreateElement {
     this.inputChild.updateAttributes({
       ...this.inputChild.attributes,
       ...helpers.removeKey(settings, inputKeys, true),
+      value: null,
     });
     this.inputChild.element.value = settings?.value || '';
 
