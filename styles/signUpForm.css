@@ -1,0 +1,63 @@
+@import './formInput.css';
+
+.sign-up-form {
+  width: 100%;
+  max-width: 670px;
+}
+
+/* Header */
+.sign-up-form .sign-up-form__title {
+  color: rgba(var(--ce-color-zinc-50));
+  font: var(--ce-font-roboto-black-2xl);
+}
+
+.sign-up-form .sign-up-form__subtitle {
+  color: rgba(var(--ce-color-zinc-50), 0.4);
+  font: var(--ce-font-roboto-medium-sm);
+}
+
+/* Form */
+.sign-up-form__form {
+  margin-top: 40px;
+}
+
+.sign-up-form__form > *:not(:first-child) {
+  margin-top: 40px;
+}
+
+/* Input Group */
+.sign-up-form__form .form__input-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.form__input-group .form-input {
+  width: 100%;
+}
+
+/* Terms */
+.sign-up-form__form .form__terms {
+  width: 100%;
+}
+
+/* Submit */
+.sign-up-form__form .form__submit {
+  width: 100%;
+}
+
+/* Log In */
+.sign-up-form__form .form__log-in {
+  color: rgba(var(--ce-color-zinc-50), 0.8);
+  font: var(--ce-font-roboto-normal-sm);
+}
+
+.form__log-in .log-in__link {
+  color: rgba(var(--ce-color-sky-400));
+  text-decoration: none;
+}
+.form__log-in .log-in__link:hover {
+  color: rgba(var(--ce-color-sky-300));
+  text-decoration: underline;
+}

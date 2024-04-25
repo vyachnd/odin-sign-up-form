@@ -1,0 +1,11 @@
+.form-input {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  font: var(--ce-font-roboto-black-sm);
+  color: rgba(var(--ce-color-zinc-50), 0.6);
+}
+.form-input .form-input__input {
+  width: 100%;
+}
