@@ -57,8 +57,6 @@ class CEButton extends CreateElement {
     }
 
     this.updateChildren(children);
-
-    this.children = children;
   }
 }
 

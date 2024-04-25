@@ -59,8 +59,6 @@ class CECheckbox extends CreateElement {
       this.checkboxButton,
       (children.length > 0 ? this.checkboxLabel : null)
     ]);
-
-    this.children = children;
   }
 }
 

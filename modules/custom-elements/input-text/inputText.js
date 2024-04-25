@@ -103,8 +103,6 @@ class CEInputText extends CreateElement {
     newChildren = newChildren.filter((child) => child);
 
     this.updateChildren(newChildren);
-
-    this.children = newChildren;
   }
 }
 
