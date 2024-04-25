@@ -45,7 +45,7 @@ class CEIcon extends CreateElement {
   }
 
   setIcon(icon) {
-    this.updateChildren([icon, ...this.children]);
+    this.updateChildren([icon]);
 
     this.icon = icon;
   }
