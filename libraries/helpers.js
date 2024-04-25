@@ -86,8 +86,12 @@ class Helpers {
     return source;
   }
 
-  removeKey(obj, keys) {
-    return Object.fromEntries(Object.entries(obj).filter(([key]) => !keys.includes(key)));
+  removeKey(obj, keys, inverse) {
+    return Object.fromEntries(Object.entries(obj).filter(([key]) => {
+      const isInclude = keys.includes(key);
+
+      return inverse ? isInclude : !isInclude;
+    }));
   }
 
   htmlEntityToUnicode(htmlEntity) {

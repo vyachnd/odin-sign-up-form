@@ -27,7 +27,6 @@ class CEInputText extends CreateElement {
     this.inputChild = new CreateElement('input', {
       type: 'text',
       class: ['ce-input__field'],
-      ...attributes,
     });
 
     Object.defineProperty(this.element, 'value', {
@@ -45,10 +44,11 @@ class CEInputText extends CreateElement {
   set value(value) { this.setSettings({ ...this.settings, value }); }
 
   setSettings(settings) {
+    const inputKeys = ['value', 'placeholder', 'for', 'required'];
+
     this.inputChild.updateAttributes({
       ...this.inputChild.attributes,
-      placeholder: settings?.placeholder,
-      for: settings?.for,
+      ...helpers.removeKey(settings, inputKeys, true),
     });
     this.inputChild.element.value = settings?.value || '';
 
@@ -57,7 +57,7 @@ class CEInputText extends CreateElement {
       class: [...(this.attributes?.class || []), 'ce-input'],
       dataset: {
         fill: true,
-        ...helpers.removeKey(settings, ['value', 'placeholder', 'for']),
+        ...helpers.removeKey(settings, inputKeys),
       },
       disabled: Boolean(settings?.disabled),
     });
