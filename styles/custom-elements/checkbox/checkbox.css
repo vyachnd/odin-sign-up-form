@@ -1,0 +1,18 @@
+.ce-checkbox {
+  display: inline-flex;
+  gap: 6px;
+  transition: background-color 0.15s, color 0.15s, opacity 0.15s;
+}
+
+/* Input */
+.ce-checkbox .ce-checkbox__input {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+/* Label */
+.ce-checkbox .ce-checkbox__label {
+  color: rgba(var(--ce-color-zinc-200));
+  font: var(--ce-font-roboto-normal);
+}
