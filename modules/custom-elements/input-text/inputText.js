@@ -44,7 +44,17 @@ class CEInputText extends CreateElement {
   set value(value) { this.setSettings({ ...this.settings, value }); }
 
   setSettings(settings) {
-    const inputKeys = ['value', 'placeholder', 'for', 'required', 'id', 'name'];
+    const inputKeys = [
+      'accept', 'alt', 'autocomplete', 'autofocus',
+      'checked', 'dirname', 'disabled', 'form',
+      'formaction', 'formenctype', 'formmethod', 'formnovalidate',
+      'formtarget', 'height', 'list', 'max',
+      'maxlength', 'min', 'minlength', 'multiple',
+      'name', 'pattern', 'placeholder', 'popovertarget',
+      'popovertargetaction', 'readonly', 'required', 'size',
+      'src', 'step', 'type', 'value',
+      'width',
+    ];
 
     this.inputChild.updateAttributes({
       ...this.inputChild.attributes,

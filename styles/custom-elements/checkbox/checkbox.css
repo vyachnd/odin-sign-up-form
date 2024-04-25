@@ -1,6 +1,7 @@
 .ce-checkbox {
   position: relative;
   display: inline-flex;
+  align-items: center;
   gap: 6px;
   transition: background-color 0.15s, color 0.15s, opacity 0.15s;
 }
