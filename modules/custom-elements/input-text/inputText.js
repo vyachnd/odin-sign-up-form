@@ -44,7 +44,7 @@ class CEInputText extends CreateElement {
   set value(value) { this.setSettings({ ...this.settings, value }); }
 
   setSettings(settings) {
-    const inputKeys = ['value', 'placeholder', 'for', 'required'];
+    const inputKeys = ['value', 'placeholder', 'for', 'required', 'id', 'name'];
 
     this.inputChild.updateAttributes({
       ...this.inputChild.attributes,
