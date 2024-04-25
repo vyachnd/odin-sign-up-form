@@ -31,10 +31,14 @@ class CECheckbox extends CreateElement {
   }
 
   setSettings(settings) {
-    this.checkboxInput.updateAttributes({ ...this.checkboxInput.attributes, checked: settings?.checked });
+    this.checkboxInput.updateAttributes({
+      ...this.checkboxInput.attributes,
+      required: Boolean(settings?.required),
+      checked: settings?.checked,
+    });
 
     this.checkboxButton.setSettings({
-      ...(helpers.removeKey(settings, ['checked'])),
+      ...(helpers.removeKey(settings, ['checked', 'required'])),
       boxed: true,
       size: 'xs',
       transparent: !settings?.checked,
