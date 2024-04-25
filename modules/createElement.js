@@ -128,7 +128,7 @@ class CreateElement {
           if (typeof attributeValue === 'boolean') {
             if (attributeValue) this.element.setAttribute(attributeKey, '');
           } else {
-            this.element.setAttribute(attributeKey, attributeValue);
+            this.element.setAttribute(attributeKey, new String(attributeValue));
           }
         }
       }
